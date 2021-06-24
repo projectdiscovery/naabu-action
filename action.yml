@@ -38,6 +38,7 @@ runs:
   using: "composite"
   steps:
     - run: |
+        sudo apt-get install libpcap-dev
         [ ! -x /home/runner/go/bin/naabu ] && GO111MODULE=on go get -v github.com/projectdiscovery/naabu/v2/cmd/naabu@v2.0.4
         [ ! -z ${{ inputs.list }} ] && echo "list=-iL ${{ inputs.list}}" >> $GITHUB_ENV
         [ ! -z ${{ inputs.ports }} ] && echo "ports=-p ${{ inputs.ports}}" >> $GITHUB_ENV
