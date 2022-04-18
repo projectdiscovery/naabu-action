@@ -1,5 +1,5 @@
 <h1 align="center">
-  <img src="https://github.com/projectdiscovery/naabu/blob/master/static/naabu-logo.png" alt="naabu" width="200px"></a>
+  <img src="https://github.com/projectdiscovery/naabu/blob/master/static/naabu-logo.png" alt="naabu" width="200px">
   <br>
 </h1>
 
@@ -44,10 +44,10 @@ jobs:
   naabu-scan:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
-      - uses: actions/setup-go@v2
+      - uses: actions/checkout@v3
+      - uses: actions/setup-go@v3
         with:
-          go-version: 1.15
+          go-version: 1.17
 
       - name: 💥 Naabu - Port Scanner
         uses: projectdiscovery/naabu-action@main
@@ -66,7 +66,7 @@ Available Inputs
 ------
 
 | Key      | Description                                      | Required |
-| -------- | ------------------------------------------------ | -------- |
+|----------|--------------------------------------------------|----------|
 | `list`   | List of hosts to perform port scan               | true     |
 | `ports`  | Ports to scan for (default - Top 100)            | false    |
 | `rate`   | Rate of port scan probes                         | false    |
