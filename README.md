@@ -16,7 +16,7 @@ Example Usage
       - name: 💥 Naabu - Port Scanner
         uses: projectdiscovery/naabu-action@main
         with:
-          list: hosts.txt
+          host: example.com
 ```
 
 **GitHub Action running naabu with custom port scan**
@@ -67,9 +67,11 @@ Available Inputs
 
 | Key      | Description                                      | Required |
 |----------|--------------------------------------------------|----------|
+| `host`   | Host to perform port scan                        | true     |
 | `list`   | List of hosts to perform port scan               | true     |
 | `ports`  | Ports to scan for (default - Top 100)            | false    |
 | `rate`   | Rate of port scan probes                         | false    |
 | `output` | File to save output result (default - naabu.log) | false    |
 | `json`   | Write results in JSON format                     | false    |
+| `passive`| Perform passive port enumeration                 | false    |
 | `flags`  | Additional naabu CLI flags to use                | false    |
