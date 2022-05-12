@@ -68,7 +68,7 @@ Available Inputs
 | Key      | Description                                      | Required |
 |----------|--------------------------------------------------|----------|
 | `host`   | Host to perform port scan                        | true     |
-| `list`   | List of hosts to perform port scan               | true     |
+| `list`   | List of hosts to perform port scan               | false    |
 | `ports`  | Ports to scan for (default - Top 100)            | false    |
 | `rate`   | Rate of port scan probes                         | false    |
 | `output` | File to save output result (default - naabu.log) | false    |
