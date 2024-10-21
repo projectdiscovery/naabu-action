@@ -44,10 +44,10 @@ jobs:
   naabu-scan:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3
-      - uses: actions/setup-go@v3
+      - uses: actions/checkout@v4
+      - uses: actions/setup-go@v5
         with:
-          go-version: 1.17
+          go-version: 1.21.x
 
       - name: 💥 Naabu - Port Scanner
         uses: projectdiscovery/naabu-action@main
@@ -55,7 +55,7 @@ jobs:
           list: hosts.txt
 
       - name: GitHub Workflow artifacts
-        uses: actions/upload-artifact@v2
+        uses: actions/upload-artifact@v4
         with:
           name: naabu.log
           path: naabu.log
